@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+button {
+    border: none;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5%;
+}
+
+.iPad-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.blue-background {
+    position: absolute;
+    width: 60%;
+    /* Responsive */
+    height: 70%;
+    background-color: #5265E1;
+    border-radius: 50% 0 0 50%;
+    right: -10%;
+    bottom: -2%;
+    z-index: -1;
+}
+
+.ipad-image {
+    width: 100%;
+
+}
+
+.primary-button {
+    background: #5265E1;
+    color: #D4D8F7;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.ghost-button {
+    color: #4b4a4a;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 6px;
+
+}
+
+.secondary-button {
+
+    background: #FA5959;
+    color: #D4D8F7;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 6px;
+}
