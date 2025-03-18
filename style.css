@@ -2,6 +2,23 @@
     box-sizing: border-box;
     font-family: 'lato', sans-serif;
     text-align: center;
+
+}
+
+:root {
+    --primary-color: #5265E1;
+    --primary-light: #e7eafb;
+    --secondary-color: #FA5959;
+    --secondary-light: #f8e3e3;
+    --brand-white: #f6f5f5;
+    --text-color: #1d1d1d;
+    --text-light: #959595;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --border-radious-lg: 10px;
+    --border-radious-md: 6px;
+    --box-shadow-lg: 0px -7px 10.4px rgba(82, 101, 225, 0.2);
 }
 
 body {
@@ -22,19 +39,22 @@ h1 {
 }
 
 h2 {
-    font-weight: 24px;
+    font-size: 30px;
 }
 
 h3 {
-    font-weight: 32px;
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 16px;
 }
 
 p {
     font-weight: 400;
     font-size: 1.1rem;
-    padding: 2% 10% 2% 10%;
-    color: #959595;
-
+    padding: 2% 10%;
+    color: var(--text-light);
 }
 
 section {
@@ -49,11 +69,9 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* position: sticky; */
-    /* top: 0; */
     background-color: #fff;
     padding: 5% 10%;
-    /* overflow: hidden; */
+
 }
 
 .iPad-wrapper {
@@ -67,7 +85,7 @@ section {
     position: absolute;
     width: 60%;
     height: 70%;
-    background-color: #5265E1;
+    background-color: var(--primary-color);
     border-radius: 50% 0 0 50%;
     right: -10%;
     bottom: -2%;
@@ -80,35 +98,34 @@ section {
 }
 
 .primary-button {
-    background: #5265E1;
-    color: #e7eafb;
+    background: var(--primary-color);
+    color: var(--primary-light);
     font-size: 1rem;
     font-weight: 600;
-    padding: 16px;
-    border-radius: 6px;
-    box-shadow: 0px -7px 10.4px rgba(82, 101, 225, 0.2);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radious-md);
+    box-shadow: var(--box-shadow-lg);
 }
 
 .ghost-button {
     font-size: 1rem;
     font-weight: 600;
-    padding: 16px;
-    border-radius: 6px;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radious-md);
     background: #F7F7F5;
-    box-shadow: 0px -7px 18.4px rgba(82, 101, 225, 0.2);
+    box-shadow: var(--box-shadow-lg);
     margin-left: 4%;
 
 
 }
 
 .secondary-button {
-
-    background: #FA5959;
-    color: #f8e3e3;
+    background: var(--secondary-color);
+    color: var(--secondary-light);
     font-size: 1rem;
     font-weight: 600;
-    padding: 16px;
-    border-radius: 6px;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radious-md);
 }
 
 
@@ -132,7 +149,7 @@ section {
 .tab-active {
     width: 50%;
     height: 1%;
-    background: #FA5959;
+    background: var(--secondary-color);
     padding: 3px;
     margin-bottom: 0px;
     position: absolute;
@@ -140,7 +157,7 @@ section {
 }
 
 .tab-unactive {
-    color: #959595
+    color: var(--text-light);
 }
 
 .description-feature-blue-bg {
@@ -220,8 +237,8 @@ section {
 }
 
 .newsletter {
-    background: #5265E1;
-    color: #e7eafb;
+    background: var(--primary-color);
+    color: var(--primary-light);
     display: flex;
     flex-direction: column;
     padding: 10%;
@@ -233,13 +250,18 @@ section {
 
 .newsletter input {
     height: 40px;
-    border-radius: 6px;
+    border-radius: var(--border-radious-md);
     border-style: none;
-    box-shadow: 0px -3px 18.4px rgba(82, 101, 225, 1);
+    box-shadow: var(--box-shadow-md);
     margin-bottom: 4%;
     padding-left: 6%;
-    color: #e2e1e1;
+    color: var(--brand-white);
 
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-container {
@@ -256,29 +278,27 @@ section {
     flex-direction: column;
     text-transform: uppercase;
     justify-content: center;
-
-
-}
-
-.footer-container a {
-    display: block;
-    color: #e2e1e1;
-    text-decoration: none;
-    margin: 5%;
     align-items: center;
 
-}
-
-.social-icons-container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 
 }
+
+.footer-links,
+a {
+    gap: var(--spacing-sm);
+    color: var(--brand-white);
+    text-decoration: none;
+    list-style: none;
+
+
+}
+
+.social-links {}
 
 /* Mobile Menu styles */
 
-.mobile-full-vh {
+
+mobile-full-vh {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -333,7 +353,7 @@ section {
 }
 
 .main-menu li a {
-    color: white;
+    color: var(--brand-white);
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 2px;
@@ -342,8 +362,8 @@ section {
 
 .outlined-button {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--brand-white);
+    border: 2px solid var(--brand-white);
     width: 100%;
     padding: 12px 0;
     text-transform: uppercase;
