@@ -74,50 +74,89 @@
         <section class="features-section">
             <h2>Features</h2>
             <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmark sync
-                between your devices so you can access them on the go.</p>
+                between
+                your
+                devices so you can access them on the go.</p>
+
             <div class="tabs-container">
-                <article class="feature-01">
-                    <div class="tab-item">
-                        <div class="tab-title">
-                            <h3>Simple Bookmarking</h3>
-                            <div class="tab-active"></div>
+                <nav class="tab-navigation" role="tablist">
+                    <!-- Feature-01-->
+                    <button class="tab-button" id="tab1-button" role="tab" aria-selected="true"
+                        aria-controls="tab1-panel">
+                        <h3>Simple Bookmarking</h3>
+                        <div class="tab-indicator">
+                        </div>
+                    </button>
+                    <!-- Feature-02-->
+                    <button class="tab-button" id="tab2-button" role="tab" aria-selected="false"
+                        aria-controls="tab2-panel">
+                        <h3>Speedy Searching</h3>
+                        <div class="tab-indicator"></div>
+                    </button>
+                    <!-- Feature-03-->
+                    <button class="tab-button" id="tab3-button" role="tab" aria-selected="false"
+                        aria-controls="tab3-panel">
+                        <h3>Easy Sharing</h3>
+                        <div class="tab-indicator"></div>
+                    </button>
+                </nav>
+
+
+
+                <div class="tab-panels-container">
+                    <div class="tab-panel active" id="tab1-panel" role="tabpanel" aria-labelledby="tab1-button">
+                        <!-- Feature-01-->
+                        <div class="tab-feature-image-wrapper">
+                            <div class="feature-blue-bg"></div>
+                            <img class="feature-image" src="assets/illustration-features-tab-1.svg"
+                                alt="Simple Bookmarking Feature">
+                        </div>
+                        <div class="tab-content">
+                            <h3>Bookmark in one click</h3>
+                            <p>Organize your bookmarks however you like. Our simple drag and drop interface gives you
+                                complete control over how you manage your favourite sites.</p>
+                            <button class="primary-button">More Info</button>
+                        </div>
+                    </div>
+                    <!-- Feature-02-->
+
+                    <div class="tab-panel" id="tab2-panel" role="tabpanel" aria-labelledby="tab2-button" hidden>
+                        <div class="tab-feature-image-wrapper">
+                            <div class="feature-blue-bg"></div>
+                            <img class="feature-image" src="assets/illustration-features-tab-2.svg"
+                                alt="Speedy Searching Feature">
+                        </div>
+                        <div class="tab-content">
+                            <h3>Intelligent search</h3>
+                            <p>Our powerful search feature will help you find saved sites in no time at all. No need to
+                                trawl
+                                through all of your bookmarks.</p>
+                            <button class="primary-button">More Info</button>
                         </div>
                     </div>
 
-
-                </article>
-                <article class="feature-02 tab-title tab-unactive">
-                    <h3>Speedy Searching</h3>
-                </article>
-                <article class="feauture-03 tab-title tab-unactive">
-                    <h3>Easy Sharing</h3>
-                </article>
-
-                <!-- MOBILE DESCRIPTION CONTAINER  -->
-                <div class="mobile-description-container">
-
-                    <div class="description-feature-01" id="description-feature-01">
-
-                        <div class="tab-active-wrapper">
-                            <div class="description-feature-blue-bg"></div>
-                            <img class="ipad-image" src="assets/illustration-features-tab-1.svg">
+                    <!-- Feature-03-->
+                    <div class="tab-panel" id="tab3-panel" role="tabpanel" aria-labelledby="tab3-button" hidden>
+                        <div class="tab-feature-image-wrapper">
+                            <div class="feature-blue-bg"></div>
+                            <img class="feature-image" src="assets/illustration-features-tab-3.svg"
+                                alt="Easy Sharing Feature">
                         </div>
-
-
-                        <h3>Bookmark in one click</h3>
-                        <p>
-                            Organize your bookmarks however you like. Our simple drag and drop interface gives you
-                            complete
-                            control over how you manage your favourite sites.
-                        </p>
+                        <div class="tab-content">
+                            <h3>Share your bookmarks</h3>
+                            <p>Easily share your bookmarks and collections with others. Create a shareable link that you
+                                can
+                                send at
+                                the click of a button.</p>
+                            <button class="primary-button">More Info</button>
+                        </div>
                     </div>
-
-
-
                 </div>
-
             </div>
         </section>
+
+        <!-- Download Section -->
+
         <section class="download-section">
             <h2>Download the extension</h2>
             <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to
