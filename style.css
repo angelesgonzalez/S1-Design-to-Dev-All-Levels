@@ -15,6 +15,7 @@
     --full-white: #ffffff;
     --neutral-off-white: #f7f7f7;
     --neutral-gray: #9194a1;
+    --neutral-gray-50-opacity: rgba(145, 148, 161, 0.5);
     --neutral-dark-blue: #242946;
     --neutral-very-dark-blue: #1d1d1d;
     --dark-blue-transparent: rgba(36, 41, 70, 0.95);
@@ -132,7 +133,6 @@ button {
     color: var(--primary-color);
     font-weight: 600;
 
-
 }
 
 .ghost-button {
@@ -194,6 +194,9 @@ button {
 
 
 /* Navigation */
+.main-menu-desktop-container {
+    display: none;
+}
 
 .top-navigation {
     display: flex;
@@ -203,6 +206,8 @@ button {
     background-color: var(--full-white);
     padding: var(--spacing-md) var(--spacing-lg);
 }
+
+
 
 /* Mobile menu */
 
@@ -357,7 +362,7 @@ button {
     position: relative;
     padding: var(--spacing-md) 0;
     border: none;
-    border-bottom: 1px solid var(--neutral-gray);
+    border-bottom: 1px solid var(--neutral-gray-50-opacity);
     text-align: center;
     cursor: pointer;
     width: 80%;
@@ -366,13 +371,17 @@ button {
 }
 
 .tab-button:first-child {
-    border-top: 1px solid var(--neutral-gray);
+    border-top: 1px solid var(--neutral-gray-50-opacity);
 }
 
 .tab-button h3 {
     color: var(--neutral-gray);
     margin: 0;
     transition: color 0.3s ease;
+}
+
+.tab-button h3:hover {
+    color: var(--neutral-very-dark-blue);
 }
 
 .tab-button.active h3 {
@@ -418,17 +427,20 @@ button {
     justify-content: center;
     align-items: center;
     margin-bottom: var(--spacing-lg);
+
 }
 
 .feature-blue-bg {
     position: absolute;
-    width: 80%;
-    height: 60%;
+    width: 60%;
+    ;
+    height: 90%;
     background-color: var(--primary-color);
-    border-radius: 0 50% 50% 0;
+    border-radius: 0% 0 50% 0%;
     left: 0;
-    bottom: 0;
+    bottom: -10%;
     z-index: -1;
+
 }
 
 .feature-image {
@@ -443,6 +455,7 @@ button {
     align-items: center;
     padding: 0 var(--spacing-md);
     text-align: center;
+    margin-top: var(--spacing-md);
 }
 
 .tab-content .primary-button {
@@ -509,33 +522,80 @@ button {
 
 /* FAQ section */
 .FAQ-container {
-
     padding: var(--spacing-xl) 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg) var(--spacing-sm);
 
 }
 
 .questions-container {
     display: flex;
     flex-direction: column;
-    padding: 0 var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
+    width: 100%;
+    padding: 0 var(--spacing-md);
+    margin: 0 auto;
 }
 
-.question {
+.question-button {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--neutral-gray);
-}
-
-.question:first-child {
-    border-top: 1px solid var(--neutral-gray);
-}
-
-.question-header h4 {
-    margin: 0;
+    padding: var(--spacing-md) 0;
+    background: none;
+    border: none;
+    cursor: pointer;
     text-align: left;
 }
+
+.question-item {
+    border-bottom: 1px solid var(--neutral-gray-50-opacity);
+
+}
+
+.question-button h4 {
+
+    margin: 0 var(--spacing-xs);
+    transition: color 0.3s;
+    text-align: left;
+}
+
+.question-button:hover h4 {
+    color: var(--secondary-color);
+}
+
+
+.arrow-icon {
+    stroke: var(--primary-color);
+    transition: transform 0.3s, stroke 0.3s;
+}
+
+.question-button.active .arrow-icon {
+    transform: rotate(180deg);
+    stroke: var(--secondary-color);
+}
+
+.answer {
+    line-height: 1.6;
+    text-align: left;
+
+}
+
+.answer p {
+    padding: var(--spacing-sm);
+    text-align: left;
+
+}
+
+
+
+.FAQ-container .primary-button {
+    width: 50%;
+    align-self: center;
+    margin-top: var(--spacing-lg);
+
+}
+
 
 /* Newsletter */
 .newsletter {
@@ -673,4 +733,216 @@ svg.icon:hover {
 }
 
 
-/* test  */
+/* Tablets/Desktop screens */
+
+@media (min-width: 900px) {
+
+    p {
+        font-size: var(--font-size-md);
+    }
+
+    main {
+        padding: var(--spacing-xxl);
+    }
+
+
+    .burger-menu {
+        display: none;
+    }
+
+
+    .main-menu-desktop-container {
+        display: flex;
+
+    }
+
+    .main-menu-desktop {
+        display: flex;
+
+    }
+
+    .main-menu-desktop li {
+        color: var(--neutral-gray);
+        text-decoration: none;
+        font-size: var(--font-size-sm);
+        letter-spacing: 2px;
+        list-style-type: none;
+        margin: var(--spacing-sm);
+    }
+
+    .main-menu-desktop li a {
+        color: var(--neutral-gray);
+        text-decoration: none;
+    }
+
+    .main-menu-desktop a:hover {
+        color: var(--secondary-color);
+    }
+
+    .header {
+        flex-direction: row-reverse;
+
+    }
+
+    .hero-image {
+        width: auto;
+
+    }
+
+    .content-ctas-wrapper {
+        width: 40vw;
+        flex-direction: row
+    }
+
+    .header-ctas-container {
+        flex-direction: row;
+
+    }
+
+    .text-header-section {
+        justify-content: start;
+
+    }
+
+    .text-header-section p {
+        text-align: left;
+        padding: 0;
+    }
+
+    .text-header-section h1 {
+        text-align: left;
+    }
+
+    .hero-image-wrapper {
+        flex-grow: 2;
+
+    }
+
+    /* features section */
+
+    .features-section p {
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: var(--border-radius-lg);
+    }
+
+    .tabs-container {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .tab-navigation {
+        flex-direction: row;
+
+    }
+
+    .tab-panel.active {
+        flex-direction: row;
+    }
+
+    .tab-button:first-child {
+        border-top: none;
+    }
+
+    /* 
+    .tab-feature-image-wrapper {
+
+    } */
+
+    .tab-content {
+        justify-content: start;
+        align-items: self-start;
+
+    }
+
+    .tab-content p {
+        text-align: left;
+        padding: 0;
+
+    }
+
+    .cards-container {
+        flex-direction: row;
+        align-items: start;
+
+    }
+
+    /* #card-chrome {
+        margin-top: ;
+    } */
+
+    .download-content-text p {
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    #card-firefox {
+        margin-top: 5%;
+    }
+
+    #card-opera {
+        margin-top: 10%;
+    }
+
+
+    .FAQ-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vw;
+    }
+
+
+
+    .FAQ-container .primary-button {
+        width: auto;
+
+    }
+
+    .FAQ-content-text {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: var(--spacing-md);
+        width: 50vw;
+    }
+
+
+    .newsletter-form {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .newsletter input {
+        width: 301px;
+
+    }
+
+    .footer-content {
+        flex-direction: row;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .footer-container ul {
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-left: var(--font-size-xxl);
+    }
+
+
+
+
+
+
+
+
+
+}
