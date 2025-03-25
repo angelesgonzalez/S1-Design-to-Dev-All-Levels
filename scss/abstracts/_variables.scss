@@ -1,0 +1,56 @@
+// Colors
+$primary-color: #5265E1;
+$primary-light: #e7eafb;
+$secondary-color: #FA5959;
+$secondary-light: #f8e3e3;
+$brand-white: #f6f5f5;
+$full-white: #ffffff;
+$neutral-off-white: #f7f7f7;
+$neutral-gray: #9194a1;
+$neutral-gray-50-opacity: rgba(145, 148, 161, 0.5);
+$neutral-dark-blue: #242946;
+$neutral-very-dark-blue: #1d1d1d;
+$dark-blue-transparent: rgba(36, 41, 70, 0.95);
+$transparent-grey: rgba(255, 255, 255, 0.15);
+
+// Typography
+$font-family: 'Lato', sans-serif;
+
+// Font Sizes Map
+$font-sizes: (
+  'xs':        14px,
+  'sm':        16px,
+  'md':        18px,
+  'lg':        24px,
+  'xl':        30px,
+  'xxl':       36px
+);
+
+// Font Weights Map
+$font-weights: (
+  'light':     300,
+  'regular':   400,
+  'medium':    500,
+  'bold':      700
+);
+
+
+// Spacing Map
+$spacing: (
+  'xs':        8px,
+  'sm':        16px,
+  'md':        24px,
+  'lg':        32px,
+  'xl':        48px,
+  'xxl':       64px
+);
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 10px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 16px rgba(82, 101, 225, 0.2);
