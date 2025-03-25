@@ -17,6 +17,8 @@ closeMobileMenu.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+	//Features tab logic
+
 	const tabContainer = document.querySelector(".tabs-container");
 	const tabButtons = document.querySelectorAll(".tab-button");
 	const tabPanels = document.querySelectorAll(".tab-panel");
@@ -55,5 +57,35 @@ document.addEventListener("DOMContentLoaded", () => {
 				btn === selectedButton ? "true" : "false"
 			)
 		);
+	};
+
+
+	// Accordion logic
+	const questionsContainer = document.getElementById("questions-container");
+	const questionButtons = document.querySelectorAll(".question-button");
+
+	questionsContainer.addEventListener("click", (event) => {
+		const question = event.target.closest(".question-button");
+		if (!question) return;
+		toggleAccordion(question);
+	});
+
+	const toggleAccordion = selectedButton => {
+		const answerId = selectedButton.getAttribute("aria-controls");
+		const selectedAnswer = document.getElementById(answerId);
+		const isExpanded = selectedButton.getAttribute("aria-expanded") === "true";
+
+		// Close all answers
+		questionButtons.forEach((btn) => {
+			const answer = document.getElementById(btn.getAttribute("aria-controls"));
+			btn.setAttribute("aria-expanded", "false");
+			answer.hidden = true;
+		});
+
+		// Open the selected answer if it was closed
+		if (!isExpanded) {
+			selectedButton.setAttribute("aria-expanded", "true");
+			selectedAnswer.hidden = false;
+		}
 	};
 });
