@@ -1,6 +1,8 @@
-// body {
-// background-color: $primary-color;
-// color: $text-color; 
-// font-weight: map-get(font-weight, bold );
-// }
+@import "abstracts/variables";
+@import "base/resets";
 
+body {
+	font-family: $font-family;
+	color: $neutral-very-dark-blue;
+	line-height: 1.2;
+}
