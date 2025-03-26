@@ -1,5 +1,23 @@
 @use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as mixin;
+
+/* Mixins */
+
+@mixin headlines {
+	font-family: v.$font-family;
+	font-weight: map-get(v.$font-weights, "bold");
+	text-align: center;
+	color: v.$neutral-very-dark-blue;
+	padding: map-get(v.$spacing, "sm");
+}
+
+@mixin paragraphs {
+	font-family: v.$font-family;
+	color: v.$neutral-gray;
+	text-align: center;
+	padding: map-get(v.$spacing, "md");
+	padding: 0 map-get(v.$spacing, "lg");
+	line-height: 1.5;
+}
 
 /* Typography */
 
@@ -9,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-	@include mixin.headlines;
+	@include headlines;
 }
 
 h1 {
@@ -29,5 +47,5 @@ h4 {
 }
 
 p {
-	@include mixin.paragraphs;
+	@include paragraphs;
 }
