@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include mixin.headlines;
+}
+
+h1 {
+	font-size: map-get(v.$font-sizes, "xxl");
+}
+
+h2 {
+	font-size: map-get(v.$font-sizes, "xl");
+}
+
+h3 {
+	font-size: map-get(v.$font-sizes, "lg");
+}
+
+h4 {
+	font-size: map-get(v.$font-sizes, "md");
+}
+
+p {
+	@include mixin.paragraphs;
+}

@@ -77,3 +77,20 @@
 		}
 	}
 }
+
+@mixin headlines {
+	font-family: v.$font-family;
+	font-weight: map-get(v.$font-weights, "bold");
+	text-align: center;
+	color: v.$neutral-very-dark-blue;
+	padding: map-get(v.$spacing, "sm");
+}
+
+@mixin paragraphs {
+	font-family: v.$font-family;
+	color: v.$neutral-gray;
+	text-align: center;
+	padding: map-get(v.$spacing, "md");
+	padding: 0 map-get(v.$spacing, "lg");
+	line-height: 1.5;
+}
