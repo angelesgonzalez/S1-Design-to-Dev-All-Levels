@@ -1,8 +1,4 @@
-@import "abstracts/variables";
-@import "base/resets";
-
-body {
-	font-family: $font-family;
-	color: $neutral-very-dark-blue;
-	line-height: 1.2;
-}
+@use "abstracts/variables" as v;
+@use "base/resets" as base;
+@use "abstracts/mixins" as mixin;
+@use "atoms/buttons" as buttons;

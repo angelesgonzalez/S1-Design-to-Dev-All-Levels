@@ -1,0 +1,21 @@
+/* CTAs */
+
+@use "../abstracts/mixins" as mixin;
+
+.primary-button {
+	@include mixin.button-style("primary");
+}
+
+.secondary-button {
+	@include mixin.button-style("secondary");
+}
+
+.ghost-button {
+	@include mixin.button-style("ghost");
+}
+
+.outlined-button {
+	@include mixin.button-style("outlined");
+}
+
+// tabs Buttons
