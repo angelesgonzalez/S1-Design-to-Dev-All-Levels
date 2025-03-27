@@ -1,3 +1,20 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+.features-section {
+	p {
+		margin: map-get(v.$spacing, "lg") auto;
+	}
+}
+
+.tab-navigation {
+	@include mixin.display-flex-column();
+	width: 100%;
+	@include mixin.desktop() {
+		flex-direction: row;
+	}
+}
+
 /* Tab Panels */
 .tab-panels-container {
 	width: 100%;
@@ -6,12 +23,13 @@
 
 .tab-panel {
 	display: none;
-
 	align-items: center;
 }
 
-.tab-panel.active {
-	display: flex;
+.tab-panel {
+	&.active {
+		display: flex;
+	}
 }
 
 .tab-feature-image-wrapper {

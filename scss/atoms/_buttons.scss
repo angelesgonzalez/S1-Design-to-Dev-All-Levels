@@ -86,19 +86,19 @@
 
 /* CTAs */
 
-.primary-button {
+.btn--primary{
 	@include button-style("primary");
 }
 
-.secondary-button {
+.btn--secondary {
 	@include button-style("secondary");
 }
 
-.ghost-button {
+.btn--ghost {
 	@include button-style("ghost");
 }
 
-.outlined-button {
+.btn--outlined {
 	@include button-style("outlined");
 }
 

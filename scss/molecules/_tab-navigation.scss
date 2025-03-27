@@ -2,13 +2,13 @@
 @use "../abstracts/mixins" as mixin;
 
 /* Tab Navigation */
-.tab-navigation {
-	@include mixin.display-flex-column();
-	width: 100%;
-	@include mixin.desktop() {
-		flex-direction: row;
-	}
-}
+// .tab-navigation {
+// 	@include mixin.display-flex-column();
+// 	width: 100%;
+// 	@include mixin.desktop() {
+// 		flex-direction: row;
+// 	}
+// }
 
 .tab-button {
 	@include mixin.tab-button();
