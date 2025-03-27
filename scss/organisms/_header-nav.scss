@@ -6,7 +6,7 @@
 /* Navigation */ // .main-menu-desktop-container {
 // }
 
-.burger-menu {
+.header-nav__burger-btn {
 	@include mixin.desktop() {
 		display: none;
 	}
@@ -20,18 +20,18 @@
 	padding: map-get(v.$spacing, "md") map-get(v.$spacing, "lg");
 }
 
-.main-menu-desktop-container {
+.header-nav__desktop-container {
 	display: none;
 	@include mixin.desktop() {
 		display: flex;
 	}
 }
 
-.main-menu-desktop {
+.header-nav__desktop-list {
 	display: flex;
 }
 
-.main-menu-desktop li {
+.header-nav__desktop-list li {
 	@include mixin.list();
 	margin: map-get(v.$spacing, "sm");
 

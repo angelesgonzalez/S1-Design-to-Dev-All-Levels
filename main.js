@@ -7,7 +7,6 @@ const showOrHideElement = (element) => {
 };
 
 burgerIcon.addEventListener("click", (event) => {
-	console.log("Burger icon clicked");
 	showOrHideElement(mobileMenu);
 });
 
