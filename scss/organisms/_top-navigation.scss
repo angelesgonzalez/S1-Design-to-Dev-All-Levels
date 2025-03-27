@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as v;
+@use "../atoms/buttons" as buttons;
+@use "../abstracts/mixins" as mixin;
+@use "../base/typography" as text;
+
+/* Navigation */ // .main-menu-desktop-container {
+// }
+
+.burger-menu {
+	@include mixin.desktop() {
+		display: none;
+	}
+}
+
+.top-navigation {
+	@include mixin.flex-space-btw-center();
+	width: 100%;
+	background-color: v.$full-white;
+	padding: map-get(v.$spacing, "md") map-get(v.$spacing, "lg");
+}
+
+.main-menu-desktop-container {
+	display: none;
+	@include mixin.desktop() {
+		display: flex;
+	}
+}
+
+.main-menu-desktop {
+	display: flex;
+}
+
+.main-menu-desktop li {
+	@include mixin.list();
+	margin: map-get(v.$spacing, "sm");
+
+	a {
+		@include mixin.link();
+		color: v.$neutral-gray;
+	}
+}

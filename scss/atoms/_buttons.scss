@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as v;
+
 /* Mixins */
 
 @mixin button-style($type) {
@@ -69,15 +71,18 @@
 
 		&:hover {
 			background-color: v.$full-white;
+			border: 2px solid v.$primary-color;
 			color: v.$primary-color;
 			font-weight: map-get(v.$font-weights, "bold");
 		}
+	} @else if $type == "icon" {
+		border: none;
+		background: transparent;
+		cursor: pointer;
 	}
 }
 
 /* CTAs */
-
-@use "../abstracts/variables" as v;
 
 .primary-button {
 	@include button-style("primary");

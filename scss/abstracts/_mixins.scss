@@ -1,3 +1,65 @@
 // CTAS
 
 @use "variables" as v;
+
+// FlexBox
+
+@mixin flex-space-btw-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin display-flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+// Lists
+
+@mixin list {
+	font-family: v.$font-family;
+	font-size: map-get(v.$font-sizes, "sm");
+	letter-spacing: 2px;
+	list-style-type: none;
+}
+
+//Links
+
+@mixin link {
+	text-decoration: none;
+	letter-spacing: 2px;
+
+	&:hover {
+		color: v.$secondary-color;
+	}
+}
+
+//icons
+
+@mixin svg-color {
+	fill: v.$full-white;
+	&:hover {
+		fill: v.$secondary-color;
+	}
+}
+
+// Media Queries
+@mixin desktop {
+	@media screen and (min-width: 900px) {
+		@content;
+	}
+}
+
+//utilities
+
+@mixin hidden {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.hidden {
+	@include hidden;
+}

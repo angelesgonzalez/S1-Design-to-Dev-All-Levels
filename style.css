@@ -208,7 +208,6 @@ button {
 }
 
 
-
 /* Mobile menu */
 
 .mobile-full-vh {
@@ -284,7 +283,6 @@ button {
     justify-content: center;
     margin-top: auto;
     padding-bottom: var(--spacing-xl);
-    display: flex;
     align-items: baseline;
 
 }
@@ -778,6 +776,8 @@ svg.icon:hover {
     .main-menu-desktop a:hover {
         color: var(--secondary-color);
     }
+
+    /* header / hero */
 
     .header {
         flex-direction: row-reverse;

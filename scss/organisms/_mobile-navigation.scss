@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as v;
+@use "../atoms/buttons" as buttons;
+@use "../abstracts/mixins" as mixin;
+@use "../base/typography" as text;
+
+/* Mobile menu */
+
+.mobile-full-vh {
+	@include mixin.display-flex-column();
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: v.$dark-blue-transparent;
+	padding: 0 map-get(v.$spacing, "lg");
+	z-index: 4;
+}
+
+.header-mobile-menu {
+	@include mixin.flex-space-btw-center();
+	padding: map-get(v.$spacing, "xxl") 0;
+	width: 100%;
+}
+
+.mobile-menu-logo-wrapper {
+	img {
+		height: 25px;
+	}
+}
+
+.close-button {
+	@include buttons.button-style("icon");
+	svg {
+		@include mixin.svg-color();
+	}
+}
+
+.mobile-menu {
+	@include mixin.display-flex-column();
+	width: 100%;
+}
+
+.main-menu {
+	@include mixin.display-flex-column();
+	width: 100%;
+	padding: 0;
+	text-align: center;
+
+	li {
+		@include mixin.list();
+		border-top: 1px solid v.$transparent-grey;
+		padding: map-get(v.$spacing, "md") 0;
+
+		&:last-child {
+			border-bottom: 1px solid v.$transparent-grey;
+		}
+		a {
+			@include mixin.link();
+			color: v.$full-white;
+		}
+	}
+}
+
+.social-icons-container {
+	display: flex;
+	gap: map-get(v.$spacing, "lg");
+	justify-content: center;
+	margin-top: auto;
+	padding-bottom: map-get(v.$spacing, "xl");
+	align-items: baseline;
+
+	svg {
+		@include mixin.svg-color();
+	}
+}
