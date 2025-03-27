@@ -5,7 +5,7 @@
 
 /* Mobile menu */
 
-.mobile-full-vh {
+.mobile-menu {
 	@include mixin.display-flex-column();
 	position: fixed;
 	top: 0;
