@@ -63,13 +63,11 @@
 }
 
 .social-icons-container {
-	display: flex;
+	@include mixin.display-flex-center();
 	gap: map-get(v.$spacing, "lg");
-	justify-content: center;
 	margin-top: auto;
 	padding-bottom: map-get(v.$spacing, "xl");
 	align-items: baseline;
-
 	svg {
 		@include mixin.svg-color();
 	}

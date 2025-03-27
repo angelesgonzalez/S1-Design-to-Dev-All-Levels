@@ -15,6 +15,11 @@
 	flex-direction: column;
 }
 
+@mixin display-flex-center {
+	display: flex;
+	justify-content: center;
+}
+
 // Lists
 
 @mixin list {
