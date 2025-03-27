@@ -3,7 +3,7 @@ const burgerIcon = document.getElementById("burger-menu");
 const closeMobileMenu = document.getElementById("close-button-mobile");
 
 const showOrHideElement = (element) => {
-	element.classList.toggle("hidden");
+	element.classList.toggle("is-hidden");
 };
 
 burgerIcon.addEventListener("click", (event) => {
