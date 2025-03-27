@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+/* Tab Navigation */
+.tab-navigation {
+	@include mixin.display-flex-column();
+	width: 100%;
+	@include mixin.desktop() {
+		flex-direction: row;
+	}
+}
+
+.tab-button {
+	@include mixin.tab-button();
+	position: relative;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.tab-indicator {
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	width: 50%;
+	height: 4px;
+	background-color: v.$secondary-color;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+}
+
+.tab-button.active .tab-indicator {
+	transform: scaleX(1);
+}

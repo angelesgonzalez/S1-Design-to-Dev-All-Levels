@@ -55,13 +55,13 @@
     --shadow-lg: 0 8px 16px rgba(82, 101, 225, 0.2);
 }
 
-/* body {
+body {
     font-family: var(--font-family);
     color: var(--neutral-very-dark-blue);
     line-height: 1.2;
     margin: 0;
     padding: 0;
-} */
+}
 
 /* Typography */
 

@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as v;
+@use "../atoms/buttons" as buttons;
+@use "../abstracts/mixins" as mixin;
+@use "../base/typography" as text;
+
+/* Header / Hero Section */
+
+.header {
+	@include mixin.display-flex-column();
+	align-items: center;
+	padding: map-get(v.$spacing, "lg");
+
+	@include mixin.desktop() {
+		flex-direction: row-reverse;
+		justify-content: center;
+	}
+
+	.hero-image-wrapper {
+		@include mixin.desktop() {
+			flex-grow: 2;
+		}
+
+		@include mixin.display-flex-center();
+		align-items: center;
+		position: relative;
+		.hero-image {
+			width: 100%;
+			@include mixin.desktop() {
+				width: auto;
+			}
+		}
+		.blue-background {
+			position: absolute;
+			width: 60%;
+			height: 70%;
+			background-color: v.$primary-color;
+			border-radius: 50% 0 0 50%;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
+}
+
+.text-header-section {
+	padding: 0 map-get(v.$spacing, "md");
+	margin-bottom: map-get(v.$spacing, "md");
+	@include mixin.desktop() {
+		justify-content: start;
+		p {
+			text-align: left;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: left;
+		}
+	}
+}
+
+.header-ctas-container {
+	@include mixin.display-flex-column();
+	gap: map-get(v.$spacing, "sm");
+	width: 100%;
+	padding: 0 map-get(v.$spacing, "lg");
+	margin-bottom: map-get(v.$spacing, "xl");
+	@include mixin.desktop() {
+		flex-direction: row;
+	}
+}
+
+.content-ctas-wrapper {
+	@include mixin.desktop() {
+		width: 40vw;
+		flex-direction: row;
+	}
+}

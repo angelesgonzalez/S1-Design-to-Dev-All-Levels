@@ -56,6 +56,40 @@
 	}
 }
 
+//tab-buttons
+
+@mixin tab-button {
+	border: none;
+	background: transparent;
+	padding: map-get(v.$spacing, "md") 0;
+	border-bottom: 1px solid v.$neutral-gray-50-opacity;
+	text-align: center;
+	cursor: pointer;
+	color: v.$neutral-gray;
+
+	&:first-child {
+		border-top: 1px solid v.$neutral-gray-50-opacity;
+		@include desktop() {
+			border-top: none;
+		}
+	}
+
+	h3 {
+		color: v.$neutral-gray;
+		margin: 0;
+		transition: color 0.3s ease;
+		&:hover {
+			color: v.$neutral-very-dark-blue;
+		}
+	}
+
+	&.active {
+		h3 {
+			color: v.$neutral-very-dark-blue;
+		}
+	}
+}
+
 //utilities
 
 @mixin hidden {
