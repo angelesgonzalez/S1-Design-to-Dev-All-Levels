@@ -1,13 +1,13 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as mixin;
 
-.features-section {
+.features {
 	p {
 		margin: map-get(v.$spacing, "lg") auto;
 	}
 }
 
-.tab-navigation {
+.features__tab-nav {
 	@include mixin.display-flex-column();
 	width: 100%;
 	@include mixin.desktop() {
@@ -16,23 +16,23 @@
 }
 
 /* Tab Panels */
-.tab-panels-container {
+.features__panel-container {
 	width: 100%;
 	margin-top: map-get(v.$spacing, "lg");
 }
 
-.tab-panel {
+.features__panel {
 	display: none;
 	align-items: center;
 }
 
-.tab-panel {
+.features__panel {
 	&.active {
 		display: flex;
 	}
 }
 
-.tab-feature-image-wrapper {
+.features__image-wrapper {
 	@include mixin.display-flex-center();
 	position: relative;
 	width: 100%;
@@ -40,7 +40,7 @@
 	margin-bottom: map-get(v.$spacing, "lg");
 }
 
-.feature-blue-bg {
+.features__image-bg {
 	position: absolute;
 	width: 60%;
 	height: 90%;
@@ -51,13 +51,13 @@
 	z-index: -1;
 }
 
-.feature-image {
+.features__image {
 	width: 80%;
 	max-width: 500px;
 	z-index: 1;
 }
 
-.tab-content {
+.features__content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -66,6 +66,6 @@
 	margin-top: map-get(v.$spacing, "md");
 }
 
-.tab-content .primary-button {
+.features__content .primary-button {
 	margin-top: map-get(v.$spacing, "md");
 }

@@ -10,8 +10,8 @@
 // 	}
 // }
 
-.tab-button {
-	@include mixin.tab-button();
+.features__tab-btn {
+	@include mixin.features__tab-btn();
 	position: relative;
 	width: 80%;
 	margin-left: auto;
@@ -19,7 +19,7 @@
 	
 }
 
-.tab-indicator {
+.features__tab-indicator {
 	position: absolute;
 	bottom: 0;
 	left: 25%;
@@ -30,6 +30,6 @@
 	transition: transform 0.3s ease;
 }
 
-.tab-button.active .tab-indicator {
+.features__tab-btn.active .features__tab-indicator {
 	transform: scaleX(1);
 }

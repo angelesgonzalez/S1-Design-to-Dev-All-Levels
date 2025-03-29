@@ -87,19 +87,19 @@
 
     <header class="hero">
 
-        <div class="hero-image-wrapper ">
-            <div class="blue-background"></div>
-            <img class="hero-image" src="assets/illustration-hero.svg">
+        <div class="hero__image-wrapper">
+            <div class="hero__image-bg"></div>
+            <img class="hero__image" src="assets/illustration-hero.svg">
         </div>
 
-        <div class="content-ctas-wrapper">
-            <div class="text-header-section">
+        <div class="hero__content">
+            <div class="hero__text">
                 <h1> A simple Bookmark Manager</h1>
                 <p>A clean and simple interface to organize your favourte websites. Open a new browser tab and see your
                     sitesf
                     load instantly. Try it for free.</p>
             </div>
-            <div class="header-ctas-container"><button class="btn--primary"> Get it on Chrome</button>
+            <div class="hero__cta-container"><button class="btn--primary"> Get it on Chrome</button>
                 <button class="btn--ghost">Get it on Firefox</button>
             </div>
         </div>
@@ -108,47 +108,47 @@
 
     </header>
     <main>
-        <section class="features-section">
+        <section class="features">
             <h2>Features</h2>
             <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmark sync
                 between
                 your
                 devices so you can access them on the go.</p>
 
-            <div class="tabs-container">
-                <nav class="tab-navigation" role="tablist">
+            <div class="features__tabs">
+                <nav class="features__tab-nav" role="tablist">
                     <!-- Feature-01-->
-                    <button class="tab-button" id="tab1-button" role="tab" aria-selected="true"
+                    <button class="features__tab-btn" id="tab1-button" role="tab" aria-selected="true"
                         aria-controls="tab1-panel">
                         <h3>Simple Bookmarking</h3>
-                        <div class="tab-indicator">
+                        <div class="features__tab-indicator">
                         </div>
                     </button>
                     <!-- Feature-02-->
-                    <button class="tab-button" id="tab2-button" role="tab" aria-selected="false"
+                    <button class="features__tab-btn" id="tab2-button" role="tab" aria-selected="false"
                         aria-controls="tab2-panel">
                         <h3>Speedy Searching</h3>
-                        <div class="tab-indicator"></div>
+                        <div class="features__tab-indicator"></div>
                     </button>
                     <!-- Feature-03-->
-                    <button class="tab-button" id="tab3-button" role="tab" aria-selected="false"
+                    <button class="features__tab-btn" id="tab3-button" role="tab" aria-selected="false"
                         aria-controls="tab3-panel">
                         <h3>Easy Sharing</h3>
-                        <div class="tab-indicator"></div>
+                        <div class="features__tab-indicator"></div>
                     </button>
                 </nav>
 
 
 
-                <div class="tab-panels-container">
-                    <div class="tab-panel active" id="tab1-panel" role="tabpanel" aria-labelledby="tab1-button">
+                <div class="features__panel-container">
+                    <div class="features__panel active" id="tab1-panel" role="tabpanel" aria-labelledby="tab1-button">
                         <!-- Feature-01-->
-                        <div class="tab-feature-image-wrapper">
-                            <div class="feature-blue-bg"></div>
-                            <img class="feature-image" src="assets/illustration-features-tab-1.svg"
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-1.svg"
                                 alt="Simple Bookmarking Feature">
                         </div>
-                        <div class="tab-content">
+                        <div class="features__content">
                             <h3>Bookmark in one click</h3>
                             <p>Organize your bookmarks however you like. Our simple drag and drop interface gives you
                                 complete control over how you manage your favourite sites.</p>
@@ -157,13 +157,13 @@
                     </div>
                     <!-- Feature-02-->
 
-                    <div class="tab-panel" id="tab2-panel" role="tabpanel" aria-labelledby="tab2-button" hidden>
-                        <div class="tab-feature-image-wrapper">
-                            <div class="feature-blue-bg"></div>
-                            <img class="feature-image" src="assets/illustration-features-tab-2.svg"
+                    <div class="features__panel" id="tab2-panel" role="tabpanel" aria-labelledby="tab2-button" hidden>
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-2.svg"
                                 alt="Speedy Searching Feature">
                         </div>
-                        <div class="tab-content">
+                        <div class="features__content">
                             <h3>Intelligent search</h3>
                             <p>Our powerful search feature will help you find saved sites in no time at all. No need to
                                 trawl
@@ -173,13 +173,13 @@
                     </div>
 
                     <!-- Feature-03-->
-                    <div class="tab-panel" id="tab3-panel" role="tabpanel" aria-labelledby="tab3-button" hidden>
-                        <div class="tab-feature-image-wrapper">
-                            <div class="feature-blue-bg"></div>
-                            <img class="feature-image" src="assets/illustration-features-tab-3.svg"
+                    <div class="features__panel" id="tab3-panel" role="tabpanel" aria-labelledby="tab3-button" hidden>
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-3.svg"
                                 alt="Easy Sharing Feature">
                         </div>
-                        <div class="tab-content">
+                        <div class="features__content">
                             <h3>Share your bookmarks</h3>
                             <p>Easily share your bookmarks and collections with others. Create a shareable link that you
                                 can

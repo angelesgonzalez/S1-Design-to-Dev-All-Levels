@@ -18,16 +18,16 @@ closeMobileMenu.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
 	//Features tab logic
 
-	const tabContainer = document.querySelector(".tabs-container");
-	const tabButtons = document.querySelectorAll(".tab-button");
-	const tabPanels = document.querySelectorAll(".tab-panel");
+	const tabContainer = document.querySelector(".features__tabs");
+	const tabButtons = document.querySelectorAll(".features__tab-btn");
+	const tabPanels = document.querySelectorAll(".features__panel");
 
 	tabButtons[0].classList.add("active");
 	tabPanels[0].classList.add("active");
 	tabPanels[0].hidden = false;
 
 	tabContainer.addEventListener("click", (event) => {
-		const button = event.target.closest(".tab-button");
+		const button = event.target.closest(".features__tab-btn");
 		if (!button) return;
 		activateTab(button);
 	});

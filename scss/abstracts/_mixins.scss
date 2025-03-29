@@ -58,7 +58,7 @@
 
 //tab-buttons
 
-@mixin tab-button {
+@mixin features__tab-btn {
 	border: none;
 	background: transparent;
 	padding: map-get(v.$spacing, "md") 0;
