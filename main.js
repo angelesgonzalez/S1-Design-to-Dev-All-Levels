@@ -18,12 +18,16 @@ closeMobileMenu.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
 	//Features tab logic
 
-	const tabContainer = document.querySelector(".features__tabs");
-	const tabButtons = document.querySelectorAll(".features__tab-btn");
-	const tabPanels = document.querySelectorAll(".features__panel");
+	const tabContainer = document.querySelector(".features");
+	const tabButtons = document.querySelectorAll(
+		".features__tab-nav .features__tab-btn"
+	);
+	const tabPanels = document.querySelectorAll(
+		".features__panel-container .features__panel"
+	);
 
-	tabButtons[0].classList.add("active");
-	tabPanels[0].classList.add("active");
+	tabButtons[0].classList.add("is-active");
+	tabPanels[0].classList.add("is-active");
 	tabPanels[0].hidden = false;
 
 	tabContainer.addEventListener("click", (event) => {
@@ -37,18 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		const selectedPanel = document.getElementById(panelId);
 
 		tabPanels.forEach((panel) => {
-			panel.classList.remove("active");
+			panel.classList.remove("is-active");
 			panel.hidden = true;
 		});
 
 		tabButtons.forEach((btn) => {
-			btn.classList.remove("active");
+			btn.classList.remove("is-active");
 		});
 
-		selectedButton.classList.add("active");
+		selectedButton.classList.add("is-active");
 		selectedButton.setAttribute("aria-selected", "true");
 		selectedPanel.hidden = false;
-		selectedPanel.classList.add("active");
+		selectedPanel.classList.add("is-active");
 
 		tabButtons.forEach((btn) =>
 			btn.setAttribute(
@@ -58,18 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		);
 	};
 
-
 	// Accordion logic
 	const questionsContainer = document.getElementById("questions-container");
-	const questionButtons = document.querySelectorAll(".question-button");
+	const questionButtons = document.querySelectorAll(".faq__question-btn");
 
 	questionsContainer.addEventListener("click", (event) => {
-		const question = event.target.closest(".question-button");
+		const question = event.target.closest(".faq__question-btn");
 		if (!question) return;
 		toggleAccordion(question);
 	});
 
-	const toggleAccordion = selectedButton => {
+	const toggleAccordion = (selectedButton) => {
 		const answerId = selectedButton.getAttribute("aria-controls");
 		const selectedAnswer = document.getElementById(answerId);
 		const isExpanded = selectedButton.getAttribute("aria-expanded") === "true";

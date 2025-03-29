@@ -23,11 +23,13 @@
 
 .features__panel {
 	display: none;
-	align-items: center;
-}
+	flex-direction: column;
 
-.features__panel {
-	&.active {
+	@include mixin.desktop() {
+		flex-direction: row;
+	}
+
+	&.is-active {
 		display: flex;
 	}
 }
