@@ -5,7 +5,7 @@
 
 /* Mobile menu */
 
-.mobile-menu {
+.mobile-menu__nav {
 	@include mixin.display-flex-column();
 	position: fixed;
 	top: 0;
@@ -17,34 +17,36 @@
 	z-index: 4;
 }
 
-.header-mobile-menu {
+.mobile-menu__header {
+	z-index: 5;
 	@include mixin.flex-space-btw-center();
 	padding: map-get(v.$spacing, "xxl") 0;
 	width: 100%;
 }
 
-.mobile-menu-logo-wrapper {
+.mobile-menu__logo-wrapper {
 	img {
 		height: 25px;
 	}
 }
 
-.close-button {
+.mobile-menu__close-btn {
 	@include buttons.button-style("icon");
 	svg {
 		@include mixin.svg-color();
 	}
 }
 
-.mobile-menu {
+.mobile-menu__nav {
 	@include mixin.display-flex-column();
 	width: 100%;
 }
 
-.main-menu {
+.mobile-menu__list {
 	@include mixin.display-flex-column();
 	width: 100%;
 	padding: 0;
+	margin-top: 30vh;
 	text-align: center;
 
 	li {
@@ -62,7 +64,7 @@
 	}
 }
 
-.social-icons-container {
+.mobile-menu__social-container {
 	@include mixin.display-flex-center();
 	gap: map-get(v.$spacing, "lg");
 	margin-top: auto;
@@ -71,4 +73,16 @@
 	svg {
 		@include mixin.svg-color();
 	}
+	z-index: 5;
 }
+
+// .mobile-menu__close-btn {
+//     display: block !important;
+//     position: absolute;
+//     top: 10px; /* Ajusta según sea necesario */
+//     right: 10px; /* Ajusta según sea necesario */
+//     width: 40px;
+//     height: 40px;
+//     background: red; /* Temporal para que se vea */
+//     z-index: 1000;
+// }
