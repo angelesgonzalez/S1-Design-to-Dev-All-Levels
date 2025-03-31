@@ -75,7 +75,7 @@ npx tailwindcss -i ./input.css -o ./src/output.css --watch
 
 ## 📸 Progress Preview
 
-[Preview](/tailwind-progress.gif)
+![Tailwind Progress](tailwind-progress.gif)
 
 ---
 
