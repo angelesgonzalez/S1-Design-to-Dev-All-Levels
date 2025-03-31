@@ -1,0 +1,19 @@
+@theme {
+    /* colors  */
+    --color-primary: #5265E1;
+    --color-primary-light: #e7eafb;
+    --color-secondary: #FA5959;
+    --color-secondary-light: #f8e3e3;
+    --color-neutral-gray: #9194a1;
+    --color-neutral-gray-50-opacity: rgba(145, 148, 161, 0.5);
+    --color-neutral-dark-blue: #242946;
+    --color-neutral-very-dark-blue: #1d1d1d;
+    --color-dark-blue-transparent: rgba(36, 41, 70, 0.95);
+    --color-transparent-grey: rgba(255, 255, 255, 0.15);
+}
+
+@layer components {}
+
+.is-hidden {
+    display: none !important;
+}
