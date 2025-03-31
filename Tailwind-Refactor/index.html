@@ -43,7 +43,7 @@
 
     <!-- Mobile Menu-->
 
-    <div class="fixed overflow-hidden  inset-0 z-50 flex flex-col p-6 bg-dark-blue-transparent"
+    <div class="fixed overflow-hidden  inset-0 z-50 flex flex-col p-6 bg-dark-blue-transparent is-hidden"
         id="mobile-menu-container">
         <div class="flex justify-between items-center pt-16 pb-12">
             <div class="h-8">
@@ -102,16 +102,16 @@
 
     <!-- HERO -->
 
-    <header class="hero">
+    <header class="flex flex-col items-center px-6 py-12 md:flex-row-reverse md:px-16 md:py-20">
 
-        <div class="hero__image-wrapper">
-            <div class="hero__image-bg"></div>
-            <img class="hero__image" src="assets/illustration-hero.svg">
+        <div class="relative w-full max-w-md mb-12 md:mb-0 md:flex-1">
+            <div class="absolute w-3/5 h-3/4 bg-primary rounded-l-full bottom-0 right-0 -z-10"></div>
+            <img class="w-full" src="assets/illustration-hero.svg">
         </div>
 
-        <div class="hero__content">
-            <div class="hero__text">
-                <h1 class="text-4xl text-center font-medium text-gray-900"> A simple Bookmark Manager</h1>
+        <div class="md:flex-1 md:pr-16">
+            <div class="">
+                <h1 class="text-3xl font-bold text-center text-gray-900 mb-4 lg:text-4xl lg:text-left"> A simple Bookmark Manager</h1>
                 <p class="text-gray-500 text-center mt-4">A clean and simple interface to organize your favourte
                     websites. Open a new browser tab and see your
                     sitesf
@@ -126,9 +126,6 @@
                     Firefox</button>
             </div>
         </div>
-
-
-
     </header>
     <main>
         <section class="features">
