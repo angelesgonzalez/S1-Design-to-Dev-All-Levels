@@ -14,20 +14,20 @@
 </head>
 
 <body>
-    <nav class="top-navigation">
+    <nav class="header-nav">
 
         <!-- main menu desktop  -->
         <img src="/assets/logo-bookmark.svg">
-        <div class="main-menu-desktop-container">
-            <ul class="main-menu-desktop">
+        <div class="header-nav__desktop-container">
+            <ul class="header-nav__desktop-list">
                 <li><a href="#">FEATURES</a></li>
                 <li><a href="#">PRICING</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
-            <button class="secondary-button">LOGIN</button>
+            <button class="btn--secondary">LOGIN</button>
         </div>
         <!-- main menu desktop end   -->
-        <button class="burger-menu" id='burger-menu' aria-label="Open navigation menu">
+        <button class="header-nav__burger-btn" id='burger-menu' aria-label="Open navigation menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
                 <path fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z" alt="Burger menu icon" />
             </svg>
@@ -35,9 +35,9 @@
     </nav>
 
     <!-- Mobile Menu-->
-    <div class="mobile-full-vh overflow-hidden hidden" id="mobile-menu-container">
-        <div class="header-mobile-menu">
-            <div class="mobile-menu-logo-wrapper">
+    <div class="mobile-menu__nav overflow-hidden is-hidden" id="mobile-menu-container">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__logo-wrapper">
                 <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                         <path
@@ -51,7 +51,7 @@
                     </g>
                 </svg>
             </div>
-            <button class="close-button" id="close-button-mobile">
+            <button class="mobile-menu__close-btn" id="close-button-mobile">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="15">
                     <path fill-rule="evenodd"
                         d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z" />
@@ -59,23 +59,23 @@
             </button>
         </div>
 
-        <nav class="mobile-menu">
-            <ul class="main-menu">
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
                 <li><a href="#">FEATURES</a></li>
                 <li><a href="#">PRICING</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
-            <button class="outlined-button">LOGIN</button>
+            <button class="btn--outlined">LOGIN</button>
         </nav>
 
-        <div class="social-icons-container">
-            <a href="#" class="social-icon" aria-label="Open Facebook">
+        <div class="mobile-menu__social-container">
+            <a href="#" class="mobile-menu__social-link" aria-label="Open Facebook">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                     <path fill-rule="evenodd"
                         d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
                 </svg>
             </a>
-            <a href="#" class="social-icon" aria-label="Open Twitter">
+            <a href="#" class="mobile-menu__social-link" aria-label="Open Twitter">
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                     <path fill-rule="evenodd"
                         d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
@@ -85,107 +85,108 @@
     </div>
 
 
-    <header class="header">
+    <header class="hero">
 
-        <div class="hero-image-wrapper ">
-            <div class="blue-background"></div>
-            <img class="hero-image" src="assets/illustration-hero.svg">
+        <div class="hero__image-wrapper">
+            <div class="hero__image-bg"></div>
+            <img class="hero__image" src="assets/illustration-hero.svg">
         </div>
 
-        <div class="content-ctas-wrapper">
-            <div class="text-header-section">
+        <div class="hero__content">
+            <div class="hero__text">
                 <h1> A simple Bookmark Manager</h1>
                 <p>A clean and simple interface to organize your favourte websites. Open a new browser tab and see your
-                    sites
-                    load instantly. Try it for free.</p>         
-                 </div>
-            <div class="header-ctas-container"><button class="primary-button"> Get it on Chrome</button>
-                <button class="ghost-button">Get it on Firefox</button>
+                    sitesf
+                    load instantly. Try it for free.</p>
+            </div>
+            <div class="hero__cta-container"><button class="btn--primary"> Get it on Chrome</button>
+                <button class="btn--ghost">Get it on Firefox</button>
             </div>
         </div>
 
-       
+
 
     </header>
     <main>
-        <section class="features-section">
+        <section class="features">
             <h2>Features</h2>
             <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmark sync
                 between
                 your
                 devices so you can access them on the go.</p>
 
-            <div class="tabs-container">
-                <nav class="tab-navigation" role="tablist">
+            <div class="features__tabs">
+                <nav class="features__tab-nav" role="tablist">
                     <!-- Feature-01-->
-                    <button class="tab-button" id="tab1-button" role="tab" aria-selected="true"
+                    <button class="features__tab-btn is-active" id="tab1-button" role="tab" aria-selected="true"
                         aria-controls="tab1-panel">
                         <h3>Simple Bookmarking</h3>
-                        <div class="tab-indicator">
+                        <div class="features__tab-indicator">
                         </div>
                     </button>
                     <!-- Feature-02-->
-                    <button class="tab-button" id="tab2-button" role="tab" aria-selected="false"
+                    <button class="features__tab-btn" id="tab2-button" role="tab" aria-selected="false"
                         aria-controls="tab2-panel">
                         <h3>Speedy Searching</h3>
-                        <div class="tab-indicator"></div>
+                        <div class="features__tab-indicator"></div>
                     </button>
                     <!-- Feature-03-->
-                    <button class="tab-button" id="tab3-button" role="tab" aria-selected="false"
+                    <button class="features__tab-btn" id="tab3-button" role="tab" aria-selected="false"
                         aria-controls="tab3-panel">
                         <h3>Easy Sharing</h3>
-                        <div class="tab-indicator"></div>
+                        <div class="features__tab-indicator"></div>
                     </button>
                 </nav>
 
 
 
-                <div class="tab-panels-container">
-                    <div class="tab-panel active" id="tab1-panel" role="tabpanel" aria-labelledby="tab1-button">
+                <div class="features__panel-container">
+                    <div class="features__panel is-active" id="tab1-panel" role="tabpanel"
+                        aria-labelledby="tab1-button">
                         <!-- Feature-01-->
-                        <div class="tab-feature-image-wrapper">
-                            <div class="feature-blue-bg"></div>
-                            <img class="feature-image" src="assets/illustration-features-tab-1.svg"
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-1.svg"
                                 alt="Simple Bookmarking Feature">
                         </div>
-                        <div class="tab-content">
+                        <div class="features__content">
                             <h3>Bookmark in one click</h3>
                             <p>Organize your bookmarks however you like. Our simple drag and drop interface gives you
                                 complete control over how you manage your favourite sites.</p>
-                            <button class="primary-button">More Info</button>
+                            <button class="btn--primary">More Info</button>
                         </div>
                     </div>
                     <!-- Feature-02-->
 
-                    <div class="tab-panel" id="tab2-panel" role="tabpanel" aria-labelledby="tab2-button" hidden>
-                        <div class="tab-feature-image-wrapper">
-                            <div class="feature-blue-bg"></div>
-                            <img class="feature-image" src="assets/illustration-features-tab-2.svg"
+                    <div class="features__panel" id="tab2-panel" role="tabpanel" aria-labelledby="tab2-button" hidden>
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-2.svg"
                                 alt="Speedy Searching Feature">
                         </div>
-                        <div class="tab-content">
+                        <div class="features__content">
                             <h3>Intelligent search</h3>
                             <p>Our powerful search feature will help you find saved sites in no time at all. No need to
                                 trawl
                                 through all of your bookmarks.</p>
-                            <button class="primary-button">More Info</button>
+                            <button class="btn--primary">More Info</button>
                         </div>
                     </div>
 
                     <!-- Feature-03-->
-                    <div class="tab-panel" id="tab3-panel" role="tabpanel" aria-labelledby="tab3-button" hidden>
-                        <div class="tab-feature-image-wrapper">
-                            <div class="feature-blue-bg"></div>
-                            <img class="feature-image" src="assets/illustration-features-tab-3.svg"
+                    <div class="features__panel" id="tab3-panel" role="tabpanel" aria-labelledby="tab3-button" hidden>
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-3.svg"
                                 alt="Easy Sharing Feature">
                         </div>
-                        <div class="tab-content">
+                        <div class="features__content">
                             <h3>Share your bookmarks</h3>
                             <p>Easily share your bookmarks and collections with others. Create a shareable link that you
                                 can
                                 send at
                                 the click of a button.</p>
-                            <button class="primary-button">More Info</button>
+                            <button class="btn--primary">More Info</button>
                         </div>
                     </div>
                 </div>
@@ -194,47 +195,49 @@
 
         <!-- Download Section -->
 
-        <section class="download-section">
-            <div class="download-content-text">
+        <section class="download">
+            <div class="download__text">
                 <h2>Download the extension</h2>
                 <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like
                     us to
                     prioritize.</p>
             </div>
-            <div class="cards-container">
-                <article class="card-download-extension" id="card-chrome">
+            <div class="download__cards">
+                <article class="download__card" id="card-chrome">
                     <img src="/assets/logo-chrome.svg">
-                    <div class="card-content-container">
+                    <div class="download__card-content">
                         <h3>Add to Chrome</h3>
                         <p>Minimum version 62</p>
                     </div>
-                    <div class="dashed-border"></div>
-                    <div class="card-button-container"><button class="primary-button">Add & Install Extension</button>
-                    </div>
+                    <div class="download__card-divider"></div>
+                    <div class="download__card-btn-container"><button class="btn--primary">Add & Install
+                            Extension</button>
+                    </div>t
 
                 </article>
 
-                <article class="card-download-extension" id="card-firefox">
+                <article class="download__card" id="card-firefox">
                     <img src="/assets/logo-firefox.svg">
-                    <div class="card-content-container">
+                    <div class="download__card-content">
                         <h3>Add to Firefox</h3>
                         <p>Minimum version 55</p>
                     </div>
-                    <div class="dashed-border"></div>
-                    <div class="card-button-container"><button class="primary-button">Add & Install Extension</button>
+                    <div class="download__card-divider"></div>
+                    <div class="download__card-btn-container"><button class="btn--primary">Add & Install
+                            Extension</button>
                     </div>
 
                 </article>
 
-                <article class="card-download-extension" id="card-opera">
+                <article class="download__card" id="card-opera">
                     <img src="/assets/logo-opera.svg">
-                    <div class="card-content-container">
+                    <div class="download__card-content">
                         <h3>Add to Opera</h3>
                         <p>Minimum version 46</p>
                     </div>
-                    <div class="dashed-border"></div>
-                    <div class="card-button-container">
-                        <button class="primary-button">Add & Install Extension</button>
+                    <div class="download__card-divider"></div>
+                    <div class="download__card-btn-container">
+                        <button class="btn--primary">Add & Install Extension</button>
                     </div>
 
                 </article>
@@ -245,23 +248,23 @@
 
         <!-- FAQ section -->
 
-        <section class="FAQ-container">
-            <div class="FAQ-content-text">
+        <section class="faq">
+            <div class="faq__text">
                 <h2>Frequently Asked Questions</h2>
                 <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to
                     email
                     us.</p>
             </div>
-            <div class="questions-container" id="questions-container">
+            <div class="faq__questions" id="questions-container">
                 <!-- Question 1 -->
-                <article class="question-item">
-                    <button class="question-button" aria-expanded="false" aria-controls="answer-1">
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-1">
                         <h4>What is Bookmark?</h4>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                             <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
                         </svg>
                     </button>
-                    <div class="answer" id="answer-1" hidden>
+                    <div class="faq__answer" id="answer-1" hidden>
                         <p>Bookmark is a clean and simple interface to organize your favorite websites. Open a new
                             browser tab
                             and see your sites load instantly. Try our free extension today!</p>
@@ -269,14 +272,14 @@
                 </article>
 
                 <!-- Question 2 -->
-                <article class="question-item">
-                    <button class="question-button" aria-expanded="false" aria-controls="answer-2">
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-2">
                         <h4>How can I request a new browser?</h4>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                             <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
                         </svg>
                     </button>
-                    <div class="answer" id="answer-2" hidden>
+                    <div class="faq__answer" id="answer-2" hidden>
                         <p>You can request a new browser by contacting our support team through the contact form on our
                             website
                             or by sending an email to support@bookmark.com.</p>
@@ -284,14 +287,14 @@
                 </article>
 
                 <!-- Question 3 -->
-                <article class="question-item">
-                    <button class="question-button" aria-expanded="false" aria-controls="answer-3">
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-3">
                         <h4>Is there a mobile app?</h4>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                             <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
                         </svg>
                     </button>
-                    <div class="answer" id="answer-3" hidden>
+                    <div class="faq__answer" id="answer-3" hidden>
                         <p>Yes! We offer mobile apps for both iOS and Android platforms. You can download them from the
                             respective app stores and enjoy the same synchronized bookmarking experience on the go.
                         </p>
@@ -299,14 +302,14 @@
                 </article>
 
                 <!-- Question 4 -->
-                <article class="question-item">
-                    <button class="question-button" aria-expanded="false" aria-controls="answer-4">
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-4">
                         <h4>What about other Chromium browsers?</h4>
-                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                             <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
                         </svg>
                     </button>
-                    <div class="answer" id="answer-4" hidden>
+                    <div class="faq__answer" id="answer-4" hidden>
                         <p>Our extension is compatible with all Chromium-based browsers, including Google Chrome,
                             Microsoft
                             Edge, Opera, and Brave. The installation process is the same across all these browsers.</p>
@@ -314,28 +317,28 @@
                 </article>
             </div>
 
-            <button class="primary-button">
+            <button class="btn--primary">
                 More Info
             </button>
         </section>
 
     </main>
-    <section class="newsletter">
-        <div class="newsletter-text-content">
-            <h4 class="subtitle-uppercase">35,000+ already joined</h4>
+    <section class="cta">
+        <div class="cta__text">
+            <h4 class="cta__subtitle">35,000+ already joined</h4>
             <h2>Stay up-to-date with what we're doing</h2>
         </div>
-        <form class="newsletter-form" novalidate><input type="email" placeholder="Enter your email address" required
+        <form class="cta__form" novalidate><input type="email" placeholder="Enter your email address" required
                 aria-label="Email address">
-            <button class="secondary-button" type="submit">Contact us</button>
+            <button class="btn--secondary" type="submit">Contact us</button>
         </form>
     </section>
 
 
 
-    <footer class="footer-container">
-        <div class="footer-content">
-            <div class="logo-wrapper">
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
                 <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                         <path
@@ -350,22 +353,22 @@
                 </svg>
             </div>
 
-            <nav class="footer-nav">
-                <ul class="footer-links">
+            <nav class="footer__nav">
+                <ul class="footer__links">
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
 
-            <div class="social-links">
-                <a href="#" class="social-link" aria-label="Visit our Facebook page">
+            <div class="footer__social-links">
+                <a href="#" class="footer__social-link" aria-label="Visit our Facebook page">
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                         <path fill-rule="evenodd"
                             d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
                     </svg>
                 </a>
-                <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                <a href="#" class="	footer__social-link" aria-label="Follow us on Twitter">
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                         <path fill-rule="evenodd"
                             d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
@@ -378,7 +381,7 @@
 
 
     <script src="main.js"></script>
-    <!-- <script src="main-refactor.js"></script> -->
+
 </body>
 
 </html>
