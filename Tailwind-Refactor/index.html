@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="input.css">
+    <!-- <link rel="stylesheet" href="dist/css/main.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Design to HTML / Vanilla CSS</title>
+</head>
+
+<body>
+    <nav class="header-nav  md:flex md:justify-between">
+
+        <!-- main menu desktop  -->
+        <img src="/assets/logo-bookmark.svg" class="h-auto">
+        <div class="header-nav__desktop-container
+        ">
+            <ul class="md:flex md:flex-row ">
+                <li class="ml-4"><a href="#">FEATURES</a></li>
+                <li class="ml-4"><a href="#">PRICING</a></li>
+                <li class="ml-4"><a href="#">CONTACT</a></li>
+            </ul>
+            <button
+                class="btn--secondary ml-4 bg-secondary text-white text-md font-medium px-4 py-4
+                rounded-md shadow-lg hover:bg-white hover:border-2 hover:border-secondary hover:text-secondary  ">LOGIN</button>
+        </div>
+
+        <!-- main menu desktop end   -->
+        <button class="header-nav__burger-btn md:hidden" id='burger-menu' aria-label="Open navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
+                <path fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z" alt="Burger menu icon" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu-->
+    <div class="mobile-menu__nav overflow-hidden is-hidden" id="mobile-menu-container">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__logo-wrapper">
+                <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <path
+                            d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                            fill="#FFF" fill-rule="nonzero" />
+                        <g>
+                            <circle fill="#fff" cx="12.5" cy="12.5" r="12.5" />
+                            <path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                                fill="rgba(36, 41, 70, 0.95)" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <button class="mobile-menu__close-btn" id="close-button-mobile">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="15">
+                    <path fill-rule="evenodd"
+                        d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <button class="btn--outlined">LOGIN</button>
+        </nav>
+
+        <div class="mobile-menu__social-container">
+            <a href="#" class="mobile-menu__social-link" aria-label="Open Facebook">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <path fill-rule="evenodd"
+                        d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                </svg>
+            </a>
+            <a href="#" class="mobile-menu__social-link" aria-label="Open Twitter">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                    <path fill-rule="evenodd"
+                        d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <header class="hero">
+
+        <div class="hero__image-wrapper">
+            <div class="hero__image-bg"></div>
+            <img class="hero__image" src="assets/illustration-hero.svg">
+        </div>
+
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 class="text-4xl text-center font-medium text-gray-900"> A simple Bookmark Manager</h1>
+                <p class="text-gray-500 text-center mt-4">A clean and simple interface to organize your favourte
+                    websites. Open a new browser tab and see your
+                    sitesf
+                    load instantly. Try it for free.</p>
+            </div>
+            <div class="flex justify-center py-8 mb-8 gap-3 ">
+                <button class="bg-primary text-white text-md font-medium px-4 py-4
+                rounded-md shadow-lg hover:bg-white hover:border-2 hover:border-primary hover:text-primary"> Get it on
+                    Chrome</button>
+                <button class="bg-white text-gray-500 text-md font-medium px-4 py-4
+                rounded-md shadow-lg hover:text-gray-600 hover:border-2 hover:border-gray-600">Get it on
+                    Firefox</button>
+            </div>
+        </div>
+
+
+
+    </header>
+    <main>
+        <section class="features">
+            <h2>Features</h2>
+            <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmark sync
+                between
+                your
+                devices so you can access them on the go.</p>
+
+            <div class="features__tabs">
+                <nav class="features__tab-nav" role="tablist">
+                    <!-- Feature-01-->
+                    <button class="features__tab-btn is-active" id="tab1-button" role="tab" aria-selected="true"
+                        aria-controls="tab1-panel">
+                        <h3>Simple Bookmarking</h3>
+                        <div class="features__tab-indicator">
+                        </div>
+                    </button>
+                    <!-- Feature-02-->
+                    <button class="features__tab-btn" id="tab2-button" role="tab" aria-selected="false"
+                        aria-controls="tab2-panel">
+                        <h3>Speedy Searching</h3>
+                        <div class="features__tab-indicator"></div>
+                    </button>
+                    <!-- Feature-03-->
+                    <button class="features__tab-btn" id="tab3-button" role="tab" aria-selected="false"
+                        aria-controls="tab3-panel">
+                        <h3>Easy Sharing</h3>
+                        <div class="features__tab-indicator"></div>
+                    </button>
+                </nav>
+
+
+
+                <div class="features__panel-container">
+                    <div class="features__panel is-active" id="tab1-panel" role="tabpanel"
+                        aria-labelledby="tab1-button">
+                        <!-- Feature-01-->
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-1.svg"
+                                alt="Simple Bookmarking Feature">
+                        </div>
+                        <div class="features__content">
+                            <h3>Bookmark in one click</h3>
+                            <p>Organize your bookmarks however you like. Our simple drag and drop interface gives you
+                                complete control over how you manage your favourite sites.</p>
+                            <button class="btn--primary">More Info</button>
+                        </div>
+                    </div>
+                    <!-- Feature-02-->
+
+                    <div class="features__panel" id="tab2-panel" role="tabpanel" aria-labelledby="tab2-button" hidden>
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-2.svg"
+                                alt="Speedy Searching Feature">
+                        </div>
+                        <div class="features__content">
+                            <h3>Intelligent search</h3>
+                            <p>Our powerful search feature will help you find saved sites in no time at all. No need to
+                                trawl
+                                through all of your bookmarks.</p>
+                            <button class="btn--primary">More Info</button>
+                        </div>
+                    </div>
+
+                    <!-- Feature-03-->
+                    <div class="features__panel" id="tab3-panel" role="tabpanel" aria-labelledby="tab3-button" hidden>
+                        <div class="features__image-wrapper">
+                            <div class="features__image-bg"></div>
+                            <img class="features__image" src="assets/illustration-features-tab-3.svg"
+                                alt="Easy Sharing Feature">
+                        </div>
+                        <div class="features__content">
+                            <h3>Share your bookmarks</h3>
+                            <p>Easily share your bookmarks and collections with others. Create a shareable link that you
+                                can
+                                send at
+                                the click of a button.</p>
+                            <button class="btn--primary">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+
+        <section class="download">
+            <div class="download__text">
+                <h2>Download the extension</h2>
+                <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like
+                    us to
+                    prioritize.</p>
+            </div>
+            <div class="download__cards">
+                <article class="download__card" id="card-chrome">
+                    <img src="/assets/logo-chrome.svg">
+                    <div class="download__card-content">
+                        <h3>Add to Chrome</h3>
+                        <p>Minimum version 62</p>
+                    </div>
+                    <div class="download__card-divider"></div>
+                    <div class="download__card-btn-container"><button class="btn--primary">Add & Install
+                            Extension</button>
+                    </div>t
+
+                </article>
+
+                <article class="download__card" id="card-firefox">
+                    <img src="/assets/logo-firefox.svg">
+                    <div class="download__card-content">
+                        <h3>Add to Firefox</h3>
+                        <p>Minimum version 55</p>
+                    </div>
+                    <div class="download__card-divider"></div>
+                    <div class="download__card-btn-container"><button class="btn--primary">Add & Install
+                            Extension</button>
+                    </div>
+
+                </article>
+
+                <article class="download__card" id="card-opera">
+                    <img src="/assets/logo-opera.svg">
+                    <div class="download__card-content">
+                        <h3>Add to Opera</h3>
+                        <p>Minimum version 46</p>
+                    </div>
+                    <div class="download__card-divider"></div>
+                    <div class="download__card-btn-container">
+                        <button class="btn--primary">Add & Install Extension</button>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- FAQ section -->
+
+        <section class="faq">
+            <div class="faq__text">
+                <h2>Frequently Asked Questions</h2>
+                <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to
+                    email
+                    us.</p>
+            </div>
+            <div class="faq__questions" id="questions-container">
+                <!-- Question 1 -->
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-1">
+                        <h4>What is Bookmark?</h4>
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                            <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
+                        </svg>
+                    </button>
+                    <div class="faq__answer" id="answer-1" hidden>
+                        <p>Bookmark is a clean and simple interface to organize your favorite websites. Open a new
+                            browser tab
+                            and see your sites load instantly. Try our free extension today!</p>
+                    </div>
+                </article>
+
+                <!-- Question 2 -->
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-2">
+                        <h4>How can I request a new browser?</h4>
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                            <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
+                        </svg>
+                    </button>
+                    <div class="faq__answer" id="answer-2" hidden>
+                        <p>You can request a new browser by contacting our support team through the contact form on our
+                            website
+                            or by sending an email to support@bookmark.com.</p>
+                    </div>
+                </article>
+
+                <!-- Question 3 -->
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-3">
+                        <h4>Is there a mobile app?</h4>
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                            <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
+                        </svg>
+                    </button>
+                    <div class="faq__answer" id="answer-3" hidden>
+                        <p>Yes! We offer mobile apps for both iOS and Android platforms. You can download them from the
+                            respective app stores and enjoy the same synchronized bookmarking experience on the go.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Question 4 -->
+                <article class="faq__item">
+                    <button class="faq__question-btn" aria-expanded="false" aria-controls="answer-4">
+                        <h4>What about other Chromium browsers?</h4>
+                        <svg class="faq__arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                            <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
+                        </svg>
+                    </button>
+                    <div class="faq__answer" id="answer-4" hidden>
+                        <p>Our extension is compatible with all Chromium-based browsers, including Google Chrome,
+                            Microsoft
+                            Edge, Opera, and Brave. The installation process is the same across all these browsers.</p>
+                    </div>
+                </article>
+            </div>
+
+            <button class="btn--primary">
+                More Info
+            </button>
+        </section>
+
+    </main>
+    <section class="cta">
+        <div class="cta__text">
+            <h4 class="cta__subtitle">35,000+ already joined</h4>
+            <h2>Stay up-to-date with what we're doing</h2>
+        </div>
+        <form class="cta__form" novalidate><input type="email" placeholder="Enter your email address" required
+                aria-label="Email address">
+            <button class="btn--secondary" type="submit">Contact us</button>
+        </form>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <path
+                            d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                            fill="#FFF" fill-rule="nonzero" />
+                        <g>
+                            <circle fill="#fff" cx="12.5" cy="12.5" r="12.5" />
+                            <path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                                fill="rgba(36, 41, 70, 0.95)" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <nav class="footer__nav">
+                <ul class="footer__links">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__social-links">
+                <a href="#" class="footer__social-link" aria-label="Visit our Facebook page">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path fill-rule="evenodd"
+                            d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+                    </svg>
+                </a>
+                <a href="#" class="	footer__social-link" aria-label="Follow us on Twitter">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="20">
+                        <path fill-rule="evenodd"
+                            d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+    <!-- <script src="main-refactor.js"></script> -->
+</body>
+
+</html>
