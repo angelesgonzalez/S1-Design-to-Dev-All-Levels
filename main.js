@@ -16,7 +16,7 @@ closeMobileMenu.addEventListener("click", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-	//Features tab logic
+
 
 	const tabContainer = document.querySelector(".features");
 	const tabButtons = document.querySelectorAll(
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		);
 	};
 
-	// Accordion logic
+
 	const questionsContainer = document.getElementById("questions-container");
 	const questionButtons = document.querySelectorAll(".faq__question-btn");
 
@@ -77,14 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		const selectedAnswer = document.getElementById(answerId);
 		const isExpanded = selectedButton.getAttribute("aria-expanded") === "true";
 
-		// Close all answers
+	
 		questionButtons.forEach((btn) => {
 			const answer = document.getElementById(btn.getAttribute("aria-controls"));
 			btn.setAttribute("aria-expanded", "false");
 			answer.hidden = true;
 		});
 
-		// Open the selected answer if it was closed
+		
 		if (!isExpanded) {
 			selectedButton.setAttribute("aria-expanded", "true");
 			selectedAnswer.hidden = false;
