@@ -3,8 +3,7 @@
 @use "../abstracts/mixins" as mixin;
 @use "../base/typography" as text;
 
-/* Navigation */ // .main-menu-desktop-container {
-// }
+
 
 .header-nav__burger-btn {
 	@include mixin.desktop() {
