@@ -3,7 +3,7 @@
 @use "../abstracts/mixins" as mixin;
 @use "../base/typography" as text;
 
-/* Header / Hero Section */
+
 
 .hero {
 	@include mixin.display-flex-column();
