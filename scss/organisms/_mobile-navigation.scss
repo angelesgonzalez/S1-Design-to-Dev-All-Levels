@@ -3,7 +3,7 @@
 @use "../abstracts/mixins" as mixin;
 @use "../base/typography" as text;
 
-/* Mobile menu */
+
 
 .mobile-menu__nav {
 	@include mixin.display-flex-column();
@@ -76,13 +76,4 @@
 	z-index: 5;
 }
 
-// .mobile-menu__close-btn {
-//     display: block !important;
-//     position: absolute;
-//     top: 10px; /* Ajusta según sea necesario */
-//     right: 10px; /* Ajusta según sea necesario */
-//     width: 40px;
-//     height: 40px;
-//     background: red; /* Temporal para que se vea */
-//     z-index: 1000;
-// }
+
