@@ -1,15 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as mixin;
 
-/* Tab Navigation */
-// .tab-navigation {
-// 	@include mixin.display-flex-column();
-// 	width: 100%;
-// 	@include mixin.desktop() {
-// 		flex-direction: row;
-// 	}
-// }
-
 .features__tab-btn {
 	@include mixin.features__tab-btn();
 	position: relative;
